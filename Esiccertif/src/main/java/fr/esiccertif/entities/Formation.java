@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -22,5 +23,13 @@ public class Formation {
 	private Date date_debut;
 	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date date_fin;
+	private boolean progress;
+	private boolean valider;
+	
+	@ManyToOne
+	 private User candidat;
+	
+	@ManyToOne
+	private User formateur;
 
 }

@@ -9,5 +9,7 @@ import fr.esiccertif.entities.Formation;
 public interface FormationRepository extends CrudRepository<Formation, Long> {
 	
 	public List<Formation> findAllById (Long id);
+	
+	public List<Formation> findByCandidatId (Long id);
 
 }
