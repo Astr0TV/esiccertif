@@ -23,11 +23,11 @@ public class User {
 	private Long id;
 	private String nom;
 	private String prenom;
-	private int tele;
+	private String tele;
 	@Column(unique=true )
 	private String email;
     private String mdp;
-    private String role = "stagaire";
+    private String role = "candidat";
     
     @ManyToMany
     private Collection<Formation> formation;
