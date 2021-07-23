@@ -39,6 +39,11 @@ public class FormationRest {
 		return  formationrepo.findByCandidatId(id);
 	}
 	
+	@GetMapping("/formation/formateur/{id}")
+	public List<Formation> getFormationByFormateurId(@PathVariable Long id){
+		return  formationrepo.findByFormateurId(id);
+	}
+	
 	
 
 }
