@@ -13,7 +13,7 @@ public interface FormationRepository extends CrudRepository<Formation, Long> {
 	
 	public List<Formation> findByCandidatId (Long id);
 	
-	//@Query(value ="SELECT nom from Formation where id <= ?1 GROUP BY nom")
+	//@Query(value ="SELECT nom from Formation GROUP BY nom")
 	public List<Formation> findByFormateurId (Long id);
 
 }
