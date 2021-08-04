@@ -32,4 +32,6 @@ public class User {
     @ManyToMany
     private Collection<Formation> formation;
 
+
+    
 }

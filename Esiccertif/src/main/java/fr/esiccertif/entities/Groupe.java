@@ -14,5 +14,7 @@ public class Groupe {
 	@Id @GeneratedValue
 	private Long id;
 	private String nom;
+	
+	
 
 }
