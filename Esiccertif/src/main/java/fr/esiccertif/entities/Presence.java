@@ -6,7 +6,6 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -16,22 +15,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity @NoArgsConstructor @AllArgsConstructor @Data
-public class Formation {
+public class Presence {
 	
 	@Id @GeneratedValue
 	private Long id;
-	private String nom;
 	@JsonFormat(pattern="dd/MM/yyyy")
-	private Date date_debut;
-	@JsonFormat(pattern="dd/MM/yyyy")
-	private Date date_fin;
-	private boolean progress;
-	private boolean valider;
+	private Date jour1; 
+	private String hours1; 
 	
-	@ManyToMany
-	 private Collection<User> candidat;
-	
-	@ManyToOne
-	private User formateur;
+    @ManyToOne
+    private Formation formation;
+    
+    @ManyToOne
+    private User candidat;
+    
+    @ManyToOne
+    private User formateur;
 
 }

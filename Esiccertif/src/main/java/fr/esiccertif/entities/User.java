@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import org.springframework.beans.factory.annotation.Value;
 
@@ -28,9 +29,12 @@ public class User {
 	private String email;
     private String mdp;
     private String role = "candidat";
-    
+   
     @ManyToMany
-    private Collection<Formation> formation;
+    private Collection<Valider> candidatevalider;
+    
+    @OneToOne
+    private Presence presence;
 
 
     
